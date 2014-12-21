@@ -1,16 +1,32 @@
 $('html').localScroll();
-$('body').scrollspy({ target: '.navbar-default' })
-$('span.grade').tooltip()
+$('body').scrollspy({ target: '.navbar-default' });
+$('span.grade').tooltip();
 $(window).scroll(function() {
-    if ($(this).scrollTop()) {
-        $('#toTop').fadeIn();
-    } else {
-        $('#toTop').fadeOut();
-    }
+	if ($(this).scrollTop()) {
+		$('#toTop').fadeIn();
+	} else {
+		$('#toTop').fadeOut();
+	}
 });
 $("#toTop").click(function() {
-    $("html, body").animate({scrollTop: 0}, 1000);
+	$("html, body").animate({scrollTop: 0}, 1000);
 });
+
+
+
+$(document).ready(function(){
+	$("#myModal").on('show.bs.modal', function(event){
+		// Get button that triggered the modal
+		var button = $(event.relatedTarget);
+		
+		// Extract value from data-* attributes
+		var titleData = button.data('title');
+		
+		$(this).find('.modal-title').text(titleData);
+	});
+});
+
+/*
 var opts = {
   lines: 12,
   angle: 0.5,
@@ -73,3 +89,4 @@ gauge = new Donut(target).setOptions(opts);
 gauge.maxValue = 100;
 gauge.animationSpeed = 64;
 gauge.set(85);
+*/
