@@ -360,7 +360,7 @@ section {
 	font-weight: 900;
 	color: #00F;
 	margin-top: 10px;
-	margin-left: 10px;
+	/*margin-left: 10px;*/
 }
 .whiteboard-font {
 	font-family:"Reenie Beanie",arial,sans-serif;
@@ -520,4 +520,9 @@ section {
 	box-shadow:0;
 	border-radius:0;
 	background: none;
+}
+
+.vertical-line {
+	width: 80%;
+	border-color:#272121
 }
